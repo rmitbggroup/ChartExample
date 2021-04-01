@@ -1,0 +1,17 @@
+storage,step,time
+memory,S1,0.15
+memory,S2,0.85
+memory,S3,1.2
+memory,S4,0.8
+sata,S1,0.15
+sata,S2,0.85
+sata,S3,10.2
+sata,S4,1.8
+nvme,S1,0.1
+nvme,S2,0.9
+nvme,S3,7.0
+nvme,S4,1.0
+optance,S1,0.2
+optance,S2,1.2
+optance,S3,0.6
+optance,S4,2.0

@@ -1,0 +1,33 @@
+
+\begin{table}[]
+\centering
+\caption{Comparison of influence maximization algorithms under classical diffusion models.}~\label{imcomparions}
+\begin{adjustbox}{width=1\textwidth}
+\begin{tabular}{cccccccccc}
+\hline
+\multirow{2}{*}{\textbf{Category}} & \multirow{2}{*}{\textbf{Method}} & \multicolumn{4}{c}{\textbf{Diffusion Model}} & \multirow{2}{*}{\textbf{Efficiency}} & \multirow{2}{*}{\textbf{Scalability}} & \multirow{2}{*}{\textbf{Effectiveness}} & \multirow{2}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}Bottleneck or\\ Breakthrough\end{tabular}}} \\ \cline{3-6}
+ &  & \textbf{IC} & \textbf{LT} & \textbf{TR} & \textbf{CT} &  &  &  &  \\ \hline
+\multirow{4}{*}{Simulation} & SimuGreedy~\cite{kempe2003maximizing} & \cmark & \cmark  & \cmark  & \cmark  & \multirow{4}{*}{\xmark} & \multirow{4}{*}{\cmark} & \multirow{4}{*}{\cmark } & \multirow{4}{*}{\begin{tabular}[c]{@{}c@{}}Bottleneck:\\ Costly \\ Monte Carlo \\ Simulations\end{tabular}} \\
+ & CELF~\cite{DBLP:conf/kdd/LeskovecKGFVG07} & \cmark & \cmark & \cmark & \cmark&  &  &  &  \\
+ & UBLF~\cite{DBLP:journals/tkde/ZhouZZG15} & \cmark & \cmark & \xmark & \xmark &  &  &  &  \\
+ & CGA~\cite{DBLP:conf/kdd/WangCSX10}  & \cmark& \xmark& \xmark & \xmark &  &  &  &  \\ \hline
+\multirow{8}{*}{Sketch} & NewGeneric~\cite{DBLP:conf/kdd/ChenWY09} & \cmark & \cmark &  \cmark&  \cmark& \multirow{7}{*}{\cmark} & \multirow{7}{*}{\xmark} &  \multirow{7}{*}{\cmark}& \multirow{7}{*}{\begin{tabular}[c]{@{}c@{}}Bottleneck:\\ High memory cost \\ of storing sketches\end{tabular}} \\
+ & SG~\cite{DBLP:conf/cikm/ChengSHZC13} &  \cmark& \cmark & \cmark & \cmark &  &  &  &  \\
+  & SGDU~\cite{cheng2013staticgreedy} & \cmark & \cmark &\cmark  & \cmark &  &  &  &  \\
+ & PMC~\cite{ohsaka2014fast} &  \cmark& \cmark &\cmark  &  \cmark&  &  &  &  \\
+ & RIS~\cite{DBLP:conf/soda/BorgsBCL14} & \cmark & \cmark & \cmark &  \cmark&  &  &  &  \\
+ & TIM~\cite{tang2014influence} &\cmark  &  \cmark&\cmark  & \cmark &  &  &  &  \\
+ & IMM~\cite{tang2015influence} & \cmark &\cmark  & \cmark & \cmark &  &  &  &  \\  \cline{2-10} 
+ & Chapter~\ref{chp:icde2019}& \cmark &  \cmark& \cmark &  \cmark&  \cmark & \cmark  &  \cmark &  Breakthrough: Sketch Compression\\  \hline 
+ %& \multicolumn{1}{l}{Chapter 3} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \begin{tabular}[c]{@{}c@{}}Breakthrough:\\ Sketch Compression\end{tabular} \\ \hline
+
+\multirow{8}{*}{Heuristic} & DegDis~\cite{DBLP:conf/kdd/ChenWY09} &  \cmark & \cmark  & \cmark  & \cmark  & \multirow{8}{*}{\cmark } & \multirow{8}{*}{\cmark } & \multirow{8}{*}{\xmark} & \multirow{8}{*}{\begin{tabular}[c]{@{}c@{}}Bottleneck:\\ No theoretical \\ guarantees \end{tabular}} \\
+ & PageRank~\cite{page1999pagerank}  & \cmark  & \cmark  & \cmark  & \cmark  &  &  &  &  \\
+ & PMIA~\cite{DBLP:conf/kdd/ChenWW10} &\cmark   & \xmark & \xmark & \xmark &  &  &  &  \\
+ & SimPath~\cite{goyal2011simpath} &\xmark & \cmark & \xmark & \xmark &  &  &  &  \\
+ & IRIE~\cite{DBLP:conf/icdm/JungHC12} & \cmark  & \xmark & \xmark & \xmark &  &  &  &  \\
+ & IMRank~\cite{cheng2014imrank} & \cmark & \xmark &\xmark  & \xmark &  &  &  &  \\
+ & EasyIM~\cite{arora2017debunking} & \cmark & \cmark &  \xmark& \xmark &  &  &  &  \\ \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}

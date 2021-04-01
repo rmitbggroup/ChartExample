@@ -1,0 +1,24 @@
+\begin{table}[t]
+\centering
+%\footnotesize % \scriptsize %
+\small
+ \begin{threeparttable}
+\caption{Sensitivity of OSPMiner's effectiveness w.r.t. the \emph{aps} threshold $\alpha$}
+\label{tab:sensitivity_alpha}
+\begin{tabular}{p{1.5cm}<{\centering}p{0.6cm}<{\centering}p{0.6cm}<{\centering}p{0.6cm}<{\centering}p{0.6cm}<{\centering}p{0.6cm}<{\centering}p{0.6cm}<{\centering}
+p{0.6cm}<{\centering}p{0.6cm}<{\centering}p{0.6cm}<{\centering}p{0.6cm}<{\centering}p{0.6cm}<{\centering}}
+\toprule
+ \multirow{2}{*}{Dataset}&\multirow{2}{*}{$\alpha$}&
+    \multicolumn{3}{c}{ Outlierness rank}&\multicolumn{3}{c}{ \tabincell{c}{\# of \\outlying patterns}}&\multicolumn{3}{c}{ \tabincell{c}{Length of \\outlying patterns}}\cr
+    \cmidrule(lr){3-5} \cmidrule(lr){6-8} \cmidrule(lr){9-11}
+     & &Min.&Max.&Avg.&Min.&Max.&Avg.&Min.&Max.&Avg.\cr
+\midrule
+\tabincell{c}{Twitter}&\tabincell{c}{0.025\\0.05\\0.075\\0.1}&\tabincell{c}{1\\1\\1\\1}&\tabincell{c}{163\\239\\239\\440}&\tabincell{c}{3.02\\5.80\\9.57\\14.19}&\tabincell{c}{1\\1\\1\\1}&\tabincell{c}{12\\11\\6\\5}
+&\tabincell{c}{2.33\\1.72\\1.44\\1.31}&\tabincell{c}{1\\1\\1\\1}&\tabincell{c}{71\\37\\85\\86}&\tabincell{c}{4.14\\4.53\\4.94\\5.08}\\
+\hline
+\tabincell{c}{Foursquare}&\tabincell{c}{0.025\\0.05\\0.075\\0.1}&\tabincell{c}{1\\1\\1\\1}&\tabincell{c}{1435\\1435\\1711\\2070}&\tabincell{c}{121.88\\121.07\\125.38\\136.98}&\tabincell{c}{1\\1\\1\\1}
+&\tabincell{c}{24\\12\\12\\8}&\tabincell{c}{1.72\\1.48\\1.35\\1.28}&\tabincell{c}{1\\1\\1\\1}&\tabincell{c}{75\\75\\75\\75}&\tabincell{c}{5.48\\5.04\\4.70\\4.34}\\
+\bottomrule
+\end{tabular}
+\end{threeparttable}
+\end{table}

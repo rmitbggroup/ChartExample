@@ -1,0 +1,42 @@
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\begin{table*}[t]
+	%\scriptsize
+	\footnotesize	
+	\renewcommand{\arraystretch}{1.2}
+	\mycaption{Model performance comparisons on the \textit{Beijing} and \textit{Chengdu} dataset. Entries marked \tup and \btup correspond to statistical significance using a paired t-test with Bonferroni correction at $95\%$ and $99.9\%$ confidence intervals respectively. Comparisons are relative to PACE.}
+	\vspace{-3ex}
+	\label{table-k-beijing}
+	\centering
+	\begin{tabular}{cccccccccccccc}
+		%\begin{tabular}{P{0.3cm}P{1cm}P{0.45cm}P{0.7cm}P{0.45cm}P{0.7cm}P{0.45cm}P{0.7cm}P{0.45cm}P{0.7cm}P{0.45cm}P{0.7cm}P{0.45cm}P{0.7cm}P{0.45cm}P{0.7cm}P{0.45cm}P{0.7cm}}
+		%\begin{tabular}{c|c|ccc|ccc|ccc}
+		\toprule
+		\multirow{2}{*}{Level} & \multirow{2}{*}{Model} & \multicolumn{6}{c}{\textit{Beijing}} & \multicolumn{6}{c}{\textit{Chengdu}} \\
+		\cmidrule{3-14}
+		&                   & P@5         & NDCG@5      & P@10      & NDCG@10	& P@20       & NDCG@20 & P@5        & NDCG@5      & P@10        & NDCG@10 & P@20      & NDCG@20  \\ \midrule %\hline
+		\multirow{5}{*}{$H_1$} 
+		& WRMF 		&0.056\btdown	&0.096\btdown	&0.047\btdown	&0.121\btdown	&0.037\btdown	&0.151\btdown	&  0.063\btdown&	0.079\btdown&	0.051\btdown&	0.098\btdown&	0.041\btdown&	0.127\btdown \\  
+		& BPRMF		&0.079\btup	&0.123\btup	&0.064\btup	&0.150\btup&	0.050\btup&	0.187\btup &0.110\btup&	0.142\btup&	0.086\btup&	0.170\btup&	0.061\btup&	0.202\btup  \\ 
+		& PACE 		&0.067\;\;  &0.104\;\;	&0.053\;\;	&0.124\;\;&	0.043\;\;&	0.156\;\;  & 0.087\;\;&	0.117\;\;&	0.074\;\;&	0.152\;\;&	0.054\;\;&	0.181\;\; \\ 
+		& SAE-NAD	&0.078\btup	&0.125\btup	&0.064\btup	&0.155\btup&	0.051\btup&	0.194\btup   & 0.100\btup&	0.128\btup&	0.081\btup&	0.155\btup&	0.057\btup&	0.185\btup  \\ 
+		& MPR		&\textbf{0.084}\btup&	\textbf{0.133}\btup&	\textbf{0.067}\btup&	\textbf{0.162}\btup&	\textbf{0.053}\btup&	\textbf{0.203}\btup  & \textbf{0.119}\tup&	\textbf{0.159}\tup&	\textbf{0.094}\btup&	\textbf{0.190}\btup&	\textbf{0.064}\btup&	\textbf{0.222}\btup
+		\\ \midrule %\hline
+		
+		\multirow{5}{*}{$H_2$} 
+		& WRMF &0.009\;\; &	0.017\;\;&	0.007\;\;&	0.022\;\;&	0.005\;\;	&0.026\btup & 0.022\;\;&0.027\;\;	&0.018\tdown&	0.034\;\;&	0.013\;\;&	0.040\;\;  \\ 
+		& BPRMF &0.007\;\;&	0.014\btup&	0.007\;\;&	0.020\btup&	0.005\;\;&	0.026\btup & 0.027\;\;&	0.037\;\;&	0.022\;\;&	0.047\;\;&	0.017\;\;&	0.058\;\; \\ 
+		& PACE  &0.007\;\;&	0.013\;\;&	0.007\;\;&	0.019\;\;&	0.005\;\;&	0.024\;\; &0.022\;\;&	0.031\;\;&	0.022\;\;&	0.039\;\;&	0.013\;\;&	0.046\;\; \\ 
+		& SAE-NAD & 0.007\;\;&	0.014\btup&	0.006\btdown&	0.018\btdown&	0.005\;\;&	0.024\;\; & \textbf{0.033}\;\;&	0.043\;\;&	0.019\;\;&	0.049\;\;&	0.017\;\;&	0.059\;\;  \\ 
+		& MPR &\textbf{0.010}\btup&	\textbf{0.018}\btup&	\textbf{0.008}\btup&	\textbf{0.023}\btup&	\textbf{0.007}\btup&	\textbf{0.030}\btup & \textbf{0.033}\btup&	\textbf{0.044}\btup&	\textbf{0.026}\tup	&\textbf{0.054}\btup&	\textbf{0.020}\btup	&\textbf{0.067}\btup
+		\\ \midrule %\hline
+		
+		\multirow{5}{*}{$H_3$} 
+		& WRMF & 0.008\btup&	0.015\btup&	0.006\btup	&	0.018\btup&	0.004\;\;&	0.022\btup &  0.021\tup&0.027\tup&	0.017\;\;	&0.033\;\;	&0.013\;\;	&0.041\;\;	 \\ 
+		& BPRMF & 0.006\btdown&	0.012\btup&	0.005\;\;&	0.015\btup&	0.004\;\;&	0.019\btup & 0.021\tup&	0.029\;\;&	0.017\;\;&	0.036\;\;&	0.013\tup&	0.043\btup  \\ 
+		& PACE & 0.007\;\;	&	0.008\;\;&	0.005\;\;&	0.009\;\;&	0.004\;\;&	0.010\;\; &  0.016\;\;&	0.023\;\;&	0.016\;\;&	0.032\;\;&	0.009\;\;&	0.035\;\;\\ 
+		& SAE-NAD & 0.008\btup&	0.015\btup&	0.007\btup	&	0.020\btup&	0.005\btup&	\textbf{0.026}\btup & 0.020\btup&	0.027\btup&	0.020\tup&	0.038\btup&	0.016\btup&	0.047\btup \\ 
+		& MPR &\textbf{0.009}\btup&	\textbf{0.015}\btup&	\textbf{0.007}\btup &	\textbf{0.021}\btup&	\textbf{0.006}\btup&	\textbf{0.026}\btup & \textbf{0.032}\btup&	\textbf{0.042}\btup&	\textbf{0.021}\btup&	\textbf{0.046}\btup&	\textbf{0.016}\btup&	\textbf{0.056}\btup
+		\\ \bottomrule %\hline
+	\end{tabular}
+	\vspace{-2ex}
+\end{table*}

@@ -1,0 +1,6 @@
+library(ggplot2)
+line_info = read.csv(file = "line_figure0.csv", header=T)
+l0<-ggplot(data=line_info) 
+l1<- l0  + geom_point(aes(x=scale,y=time),shape=21) + geom_line(aes(x=scale,y=time,group=1)) + geom_bar(stat = "identity",aes(x=scale,y=size*3),alpha=.7,width = 0.5) 
+l2<- l1 + scale_y_continuous(breaks = seq(0,2000,200),sec.axis = (sec_axis(~./3,name="result size", breaks=seq(0,500,50))))
+ggsave("double_y_axis.pdf",plot=l2)

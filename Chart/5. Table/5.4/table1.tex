@@ -1,0 +1,32 @@
+\begin{table*}[t]
+    \centering
+    \caption{Comparing \system~ With Other Distributed Systems (in C1 and C2)}
+    \label{tab:comparison_intro}
+    \begin{threeparttable}
+    \begin{tabular}{ccccccccccccc}
+    \toprule
+      \multirow{2}{*}{Work} & \multicolumn{3}{c}{Basic Query} & \multicolumn{4}{c}{Advanced Query}& \multicolumn{2}{c}{Scalability\tnote{4}} & \multicolumn{3}{c}{Trajectory Properties}\\
+      \cmidrule(r){2-4} \cmidrule(r){5-8} \cmidrule(r){9-10} \cmidrule(r){11-13}
+      & \IDTQuery\tnote{1} & \SRQuery & \STQuery & \SimQuery & \SubSimQuery & \kNNQuery & \JoinQuery & \textit{Computation} & \textit{Storage} & \textit{NoP} & \textit{STS} & \textit{DoT} \\ %\hline
+      \midrule
+      Summit~\cite{Summit} & $\times$ & \checkmark & \checkmark & $\times$ & $\times$ & $\times$ & $\times$ & \checkmark & \checkmark & - & - & - \\ %\hline
+      DFT~\cite{DFT} & $\times$ & $\times$ & $\times$ & F/H\tnote{2}& $\times$ & F/H & $\times$ & \checkmark & $\times$\tnote{5} & $\times$ & $\times$ & $\times$ \\ %\hline
+      DITA~\cite{DITA} & $\times$ & \checkmark & $\times$ & F/D/L/E\tnote{3} & $\times$ & F/D/L/E & \checkmark & \checkmark & $\times$ & $\times$ & $\times$ & \checkmark\\ %\hline
+      MobilityDB~\cite{MobilityDB} & $\times$ & \checkmark & \checkmark & $\times$ & $\times$ & $\times$ & $\times$ & \checkmark & \checkmark & \checkmark & \checkmark & $\times$ \\ %\hline
+      TrajMesa~\cite{TrajMesa} & \checkmark & \checkmark & \checkmark & F/H & $\times$ & F/H & $\times$ & $\times$ & \checkmark & $\times$ & $\times$ & $\times$ \\ %\hline
+      \midrule
+      \system & \checkmark & \checkmark & \checkmark & F/H/D/L/E & \checkmark & F/H/D/L/E & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\ %\hline
+      \bottomrule
+    \end{tabular}
+    \begin{tablenotes}
+      \footnotesize
+      \item[1] \IDTQuery~ refers to id-temporal query. Other queries can be found in Section \ref{typicalq}.
+      \item[2] F, H, D, L, and E refer to Fr{\'{e}}chet, Hausdorff, DTW, LCSS, and EDR.
+      \item[3] LCSS' definition in DITA is not equivalent to the original paper~\cite{LCSS}.
+      \item[4] Scalability means scaling out here.
+      \item[5] Spark is a main-memory processing system, which needs lots of memory for the massive trajectories.
+      %\item[6] \hai{Do we need to explain why an existing system can handle some properties?} 
+      \end{tablenotes}
+      \end{threeparttable}
+  \end{table*}
+  
